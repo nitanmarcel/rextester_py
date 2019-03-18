@@ -1,8 +1,11 @@
 import requests
+import logging
 
 from rextester_py.langs import languages
 
 URL = "https://rextester.com/rundotnet/api"
+
+logging.getLogger(__name__)
 
 
 def rexec(lang, code, stdin):

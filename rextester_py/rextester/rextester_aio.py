@@ -1,6 +1,10 @@
 import aiohttp
+import logging
 
 from rextester_py.langs import languages
+
+
+logging.getLogger(__name__)
 
 
 async def __fetch(session, url, data):
