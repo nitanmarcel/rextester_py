@@ -1,7 +1,7 @@
 import aiohttp
 import logging
 
-from rextester_py.langs import languages
+from rextester_py.data import languages, compiler_args
 
 
 logging.getLogger(__name__)
@@ -12,14 +12,17 @@ async def __fetch(session, url, data):
         return await response.json()
 
 
-async def rexec(lang, code, stdin):
+async def rexec_aio(lang, code, stdin=None):
     if lang.lower() not in languages:
         raise UnknownLanguage("Unknown Language")
 
     data = {
-        "LanguageChoice": languages[lang.lower()],
+        "LanguageChoice": languages.get(
+            lang.lower()),
         "Program": code,
-        "Input": stdin}
+        "Input": stdin,
+        "CompilerArgs": compiler_args.get(
+            lang.lower())}
 
     async with aiohttp.ClientSession(raise_for_status=True) as session:
         response = await __fetch(session, "https://rextester.com/rundotnet/api", data)

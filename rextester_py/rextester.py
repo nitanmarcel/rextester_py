@@ -1,18 +1,24 @@
 import requests
 import logging
 
-from rextester_py.langs import languages
+from rextester_py.data import languages, compiler_args
 
 URL = "https://rextester.com/rundotnet/api"
 
 logging.getLogger(__name__)
 
 
-def rexec(lang, code, stdin):
+def rexec(lang, code, stdin=None):
     if lang.lower() not in languages:
         raise CompilerError("Unknown language")
 
-    data = {"LanguageChoice": languages[lang.lower()], "Program": code, "Input": stdin}
+    data = {
+        "LanguageChoice": languages.get(
+            lang.lower()),
+        "Program": code,
+        "Input": stdin,
+        "CompilerArgs": compiler_args.get(
+            lang.lower())}
 
     response = requests.post(URL, data=data)
     response.raise_for_status()

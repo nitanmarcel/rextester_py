@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='rextester_py',
-    version='0.0.1',
+    version='0.0.2',
     url='https://github.com/nitanmarcel/rextester_py',
     license='MIT',
     author='nitanmarcel',
@@ -15,8 +15,7 @@ setup(
     platforms='any',
     install_requires=[
         'aiohttp',
-        'requests'
-    ],
+        'requests'],
     include_package_data=True,
     classifiers=[
         'Environment :: Web Environment',
@@ -26,6 +25,4 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        'Topic :: Software Development :: Libraries :: Python Modules'
-]
-)
+        'Topic :: Software Development :: Libraries :: Python Modules'])
