@@ -47,3 +47,8 @@ Hello World
 c#, vb.net, f#, java, python, c (gcc), c++ (gcc), php, pascal, objective-c, haskell, ruby, perl, lua, nasm, sql server, javascript, lisp, prolog, go, scala, scheme, node.js, python 3, octave, c (clang), c++ (clang), c++ (vc++), c (vc), d, r, tcl, mysql, postgresql, oracle, swift, bash, ada, erlang, elixir, ocaml, kotlin, brainfuck, fortran
 
 ```
+
+## Buy me a beer:
+
+ - PayPal: https://www.paypal.me/marcelalexandrunitan?locale.x=en_US
+ - Revolut: Hit me on telegram with a payment link: https://t.me/nitanmarcel
